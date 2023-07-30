@@ -5,10 +5,12 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import './App.css'
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import {Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Line, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor }from './pages';
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Area, Line, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { useStateContext } from './context/ContextProvider';
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
+  
   return (
     <BrowserRouter>
       <div className="flex relative dark:bg-main-dark-bg">
